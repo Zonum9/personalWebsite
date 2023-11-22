@@ -1,4 +1,9 @@
-#ado{
+:root{
+  --AccentColor:rgb(150, 25, 222);
+  --regularTextColor:rgb(230, 216, 255);  
+}
+
+#portrait{
   padding-top: 50px;
   padding-right: 20px;
   padding-bottom: 10px;
@@ -6,22 +11,24 @@
     float: left;
 }
 
+
+
 body{
-    background: linear-gradient(to bottom, #290928,#000000)
+  background-color: #1E1E1E;  
+  
+  /* background: linear-gradient(to bottom, #290928,#000000) */
 }
 
 .text{
-    color:rgba(69, 1, 255, 0.557);
-    text-shadow: 10px,10px,#a6eb04;
+    color: var(--AccentColor); 
     font-size: 50px;
     font-family:'Times New Roman', Times, serif;
-    color: rgb(117, 20, 173);
     text-align: justify;
     text-shadow: 1px 1px 0px rgb(0, 0, 0);
 }
 
 p{
-  color:rgba(69, 1, 255, 0.557);
+  color:var(--regularTextColor) 
 }
 
 #welcome{    
@@ -41,11 +48,12 @@ p{
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 100px;
+    scroll-margin-top: 100px;
 }
 
 .topnav a{
     float:left;
-    color: #f2f2f2;
+    color: var(--regularTextColor);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -57,17 +65,17 @@ p{
     top:0;
     left: 0;
     right: 0;    
-    background-color: #140514;
+    background-color: #000000;
   }
   
   /* Change the color of links on hover */
   .topnav a:hover {
-    background-color: #ddd;
+    background-color: var(--regularTextColor);
     color: black;
   }
   
   /* Add a color to the active/current link */
   .topnav a.active {
-    background-color: #53044c;
-    color: white;
+    background-color: var(--AccentColor);
+    color: var(--regularTextColor);
   }
