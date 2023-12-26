@@ -1,21 +1,23 @@
 :root{
   --AccentColor:rgb(150, 25, 222);
-  --regularTextColor:rgb(230, 216, 255);  
+  --regularTextColor:rgb(230, 216, 255); 
+  --cardColor: rgb(83, 83, 83); 
+  --hoverColor:#6616d0;
 }
 
 #portrait{
   padding-top: 50px;
   padding-right: 20px;
   padding-bottom: 10px;
-    width: 200px;
-    float: left;
+    width: 300px;
+    /* float: left; */
 }
 
 
 
 body{
   background-color: #1E1E1E;  
-  
+  /* display: flex; */
   /* background: linear-gradient(to bottom, #290928,#000000) */
 }
 
@@ -26,6 +28,73 @@ body{
     text-align: justify;
     text-shadow: 1px 1px 0px rgb(0, 0, 0);
 }
+.card{
+  font-size: 10px;
+  /* position: center; */
+  background: var(--cardColor);
+  border-radius: 20px;
+  /* margin: 50px; */
+  width: 10px;
+  /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
+  
+}
+.project-image{
+ width: 30%;
+ height: 10%;
+ /* float: right; */
+ 
+}
+.card-content{
+  margin: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container{
+  /* display: flex; */
+  /* justify-content: space-evenly; */
+  /* width: 95%; */
+  margin: 50px;
+  /* color:yellow; */
+}
+
+.card .button button{
+  background: var(--AccentColor);
+  outline: none;
+  border: none;
+  color: var(--regularTextColor);
+  padding: 8px 22px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.button button:hover{
+  background: var(--hoverColor);
+}
+
+.swiper-pagination{
+  position: absolute;
+}
+
+.swiper-pagination-bullet{
+  height: 7px;
+  width: 26px;
+  border-radius: 25px;
+  background: #7d2ae8;
+}
+
+.swiper-button-next, .swiper-button-prev{
+  opacity: 0.7;
+  color: #7d2ae8;
+  transition: all 0.3s ease;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover{
+  opacity: 1;
+  color: #7d2ae8;
+}
+
 
 p{
   color:var(--regularTextColor) 
@@ -49,7 +118,9 @@ p{
     padding-right: 50px;
     padding-bottom: 100px;
     scroll-margin-top: 100px;
+    
 }
+
 
 .topnav a{
     float:left;
@@ -60,11 +131,13 @@ p{
     font-size: 25px;
   }
 
+
 .topnav {
     position: fixed;    
     top:0;
     left: 0;
     right: 0;    
+    z-index: 100;
     background-color: #000000;
   }
   
@@ -79,3 +152,5 @@ p{
     background-color: var(--AccentColor);
     color: var(--regularTextColor);
   }
+
+
