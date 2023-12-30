@@ -6,10 +6,13 @@
 }
 
 #portrait {
-  padding-right: 20px;
-  padding-bottom: 20px;
-  width: 10%;  
+  border: 2px solid var(--AccentColor);  
+  margin-right: 20px;
+  margin-bottom: 5px;
+  width: 15%;  
   float: left;
+  border-radius: 40px;
+  
 }
 
 
@@ -23,7 +26,7 @@ body {
 .text {
   color: var(--AccentColor);
   font-size: 50px;
-  font-family: 'Times New Roman', Times, serif;
+  /* font-family: 'Times New Roman', Times, serif; */
   text-align: justify;
   text-shadow: 1px 1px 0px rgb(0, 0, 0);
   word-wrap: break-word;
@@ -57,7 +60,7 @@ p {
   min-width: 0;
   margin: 10px;
   font-size: 32px;
-  border: 20px solid #000;
+  /* border: 20px solid #000; */
 }
 
 
@@ -103,7 +106,8 @@ p {
 #welcome {
   padding-top: 100px;
   text-align: center;
-  font-size: 70px;
+  font-size: 80px;
+  font-weight:lighter;
 
 }
 
@@ -119,7 +123,7 @@ section {
   padding-left: 50px;
   padding-right: 50px;
   padding-bottom: 100px;
-  scroll-margin-top: 100px;
+  scroll-margin-top: 60px;
 }
 section::after{
   content: "";

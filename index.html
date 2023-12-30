@@ -7,7 +7,7 @@
    <!-- Tab name of the webpage in the browser -->
    <title>Andres Munoz</title>
    <meta charset="UTF-8">
-   <!-- standardize slcaling no matter the browser/device -->
+   <!-- standardize scaling no matter the browser/device -->
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
    <!-- ===== Link Swiper's CSS ===== -->
@@ -30,31 +30,32 @@
 
 <body>
    <nav class="topnav">
-      <img id="logo" alt="image of Ado" src="https://static.wikia.nocookie.net/youtube/images/f/fe/Ado.jpg">
+      <img id="logo" alt="image of Ado" src="images/icon.png">
       <a class="active" href="#about">About me</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact me</a>
       <a href="#others">Others</a>
    </nav>
    <!-- Main page heading -->
-   <h1 class="text" id="welcome">Welcome to my website</h1>
+   <div class="text" id="welcome">Welcome to my website!</div>
 
    <!-- Sections -->
    <section class="text" id="about">About me<br>
       <div class="content">
-         <img id="portrait" alt="my portrait" src="https://static.wikia.nocookie.net/youtube/images/f/fe/Ado.jpg">
-         <p>
-            write a lot of crap about myse kjfkfjads faskjfhklasd ksdjhf
-            ksadhf
-            ksahfllaskjhf kalshf kashjdfl lf to make myself look good
-            djsakdfsdfasdfjhsaddfjasd dskfjhasdkjd fksaddhfaskd fk
-            skafasdkfhas
-            skjfh aaksjhfalskjfaskjdhf orem ipsum dolor sit amet, consectetur
-            adipiscing elit. Nam malesuada sem nec nisl
+         <img id="portrait" alt="my portrait" src="images/portrait.png">
+         <p id="age">
+            Thank you for taking a look at my website! My name is Andres Munoz, a motivated
+             X year old developer eager to get into the professional field. <br><br>
+             Most of my experience comes from school projects, however I always made sure to go above 
+             and beyond to ensure that confidently say that I understand what I am doing, and can apply it in the real world.
+              I am currently enrolled in McGill university and expect to finish my studies in April 2025.
+            
+              <br><br>On a personal level, I am a very curious person, always looking for new and interesting topics to learn about.
+              I also enjoy playing videogames and spending time with my family.
          </p>
       </div>
    </section>
-
+   <!-- todo make it so the top nav selected field changes when scrolling -->
    <section class="text" id="projects">Projects <br><br>
       <div class="content">
          <div class="swiper mySwiper container">
@@ -64,22 +65,20 @@
                <div class="swiper-slide card">
                   <div class="card-container">
                      <div class="card-content">
-                        <div class="text">Project 1
-                           <p> this is the project description what happens if i
-                              make it longer i wonder?
-                              this is the test of that thing because i donot
-                              kown whtowiuhewekj f
+                        <div class="text">Chess-game GUI 
+                           <p> Made a fully functional GUI for a chess game using JavaFX. 
+                              This was my final project for college, 
+                              and it was made in collaboration with 2 other people,
+                               who were handling chess engine logic and local online play respectively.
+                               All menu logic and controls were implemented by me. I also helped with 
+                               merging all the individual components together, debugging them and adding additional 
+                               functionalities to them when necessary.
                            </p>
                            <div class="button">
-                              <button>Project repo</button>
+                              <button onclick="window.location.href='https://github.com/SaadZellag/Chess-Game';"">Project repository</button>
                            </div>
-                           <p>
-                              <a href='https://github.com/SaadZellag/Chess-Game'>link
-                                 to jeffrey<br></a>
-                           </p>
                         </div>
-                        <img class="project-image" src="https://static.wikia.nocookie.net/youtube/images/f/fe/Ado.jpg"
-                           alt>
+                        <img class="project-image" src="images/project1.png">
 
                      </div>
                   </div>
@@ -91,7 +90,7 @@
                      <div class="card-content">
                         <div class="text">Project 2
                            <p> this is the project description what
-                              happsssssssssssssseeeeeesssssssssssssssssssssssssssssssssssssssssssssssssssdsdssssssssssssssssssssssssssssssssens if i
+                              happsssssssssssssseeeeeesssssssssssssssssssssssssssssssssssssssssssssssssssdsdssssssssssssssssssssssssssssssssens
                               make it longer i wonder?
                               this is the test of that thing because i donot
                               kown whtowiuhewekj f
