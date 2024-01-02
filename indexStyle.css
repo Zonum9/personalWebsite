@@ -7,10 +7,11 @@
 
 #portrait {
   border: 2px solid var(--AccentColor);  
-  margin-right: 20px;
-  margin-bottom: 5px;
-  width: 15%;  
-  float: left;
+  margin-top: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;  
   border-radius: 40px;
   
 }
@@ -28,6 +29,8 @@ body {
   font-size: 50px;
   /* font-family: 'Times New Roman', Times, serif; */
   text-align: justify;
+  /* text-align-last: left; */
+  hyphens: auto;
   text-shadow: 1px 1px 0px rgb(0, 0, 0);
   word-wrap: break-word;
 }
@@ -51,7 +54,10 @@ p {
   width: 100%;  
   display: flex;
   align-items:center;
+  flex-wrap: wrap;
 }
+
+
 .card-content .text{
   height: 100%;
 }
@@ -63,7 +69,6 @@ p {
   /* border: 20px solid #000; */
 }
 
-
 .card .button button {
   background: var(--AccentColor);
   outline: none;
@@ -73,6 +78,31 @@ p {
   border-radius: 20px;
   font-size: 14px;
   cursor: pointer;
+  /* align-self:flex-end; */
+
+}
+
+@media only screen and (max-width: 1000px) {
+  .card-content {
+    height: 100%;  
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+  }
+  .card-content .text{
+    width: 100%;
+  }
+  .card-content .text{
+    flex:2;
+    min-height: 0;
+    height: 50%;
+    text-align: left;
+    font-size: 50%;
+    /* border: 20px solid #000; */
+  }
+  .card-content .project-image{
+    width: 90%;
+  }
 }
 
 .button button:hover {
@@ -87,8 +117,7 @@ p {
 .swiper-pagination-bullet {
   margin-top: 1000px;
   height: 7px;
-  width: 26px;
-  border-radius: 25px;
+  width: 30px;
   background: var(--AccentColor);
 }
 
@@ -111,13 +140,7 @@ p {
 
 }
 
-#logo {
-  float: right;
-  /* padding-top: 10px; */
-  padding-right: 30px;
-  /* padding-bottom: 10px; */
-  width: 55px;
-}
+
 
 section {
   padding-left: 50px;
@@ -136,19 +159,19 @@ section::after{
 }
 section .content {
   position: relative;
-  align-items: flex-start;
+  align-items:center;
 }
 
 
 .topnav a {
-  float: left;
-  color: var(--regularTextColor);
-  text-align: center;
-  padding: 14px 16px;
+  padding: 0px 10px 0px 10px;
   text-decoration: none;
-  font-size: 25px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  height: 100%;
+  text-align: center;
 }
-
 
 .topnav {
   position: fixed;
@@ -157,18 +180,24 @@ section .content {
   right: 0;
   z-index: 100;
   background-color: #000000;
+  display: flex;
+  flex-direction:row;
+  height:  50px;
 }
-
+#logo {
+  margin-right: 2px;
+  margin-left: auto;
+}
 /* Change the color of links on hover */
 .topnav a:hover {
   background-color: var(--regularTextColor);
+}
+.topnav a:hover p{
   color: black;
 }
-
 /* Add a color to the active/current link */
 .topnav a.active {
   background-color: var(--AccentColor);
-  color: var(--regularTextColor);
 }
 
 
