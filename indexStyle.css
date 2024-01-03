@@ -26,12 +26,11 @@ body {
 
 .text {
   color: var(--AccentColor);
-  font-size: 50px;
+  font-size: 250%;
   /* font-family: 'Times New Roman', Times, serif; */
   text-align: justify;
-  /* text-align-last: left; */
   hyphens: auto;
-  text-shadow: 1px 1px 0px rgb(0, 0, 0);
+  /* text-shadow: 1px 1px 0px rgb(0, 0, 0); */
   word-wrap: break-word;
 }
 
@@ -69,7 +68,7 @@ p {
   /* border: 20px solid #000; */
 }
 
-.card .button button {
+button {
   background: var(--AccentColor);
   outline: none;
   border: none;
@@ -79,6 +78,30 @@ p {
   font-size: 14px;
   cursor: pointer;
   /* align-self:flex-end; */
+
+}
+button:hover {
+  background: var(--hoverColor);
+  color:black;
+}
+
+#contact i{
+  font-size: 200%;
+  cursor: pointer;
+  margin: auto;
+}
+#contact a{
+  margin: auto;
+  color: var(--AccentColor);
+}
+#contact i:hover{
+  color: var(--hoverColor);
+}
+#contact .content{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 100px;
 
 }
 
@@ -105,10 +128,7 @@ p {
   }
 }
 
-.button button:hover {
-  background: var(--hoverColor);
-  color:black;
-}
+
 
 .swiper-pagination {
   position: absolute;
@@ -143,9 +163,10 @@ p {
 
 
 section {
-  padding-left: 50px;
+  margin: 20px;
+  /* margin-left: 50px;
   padding-right: 50px;
-  padding-bottom: 100px;
+  padding-bottom: 100px; */
   scroll-margin-top: 60px;
 }
 section::after{
@@ -153,6 +174,8 @@ section::after{
   display: table;
   clear: both;
 }
+
+
 
 .swiper{
   width: 90%;
