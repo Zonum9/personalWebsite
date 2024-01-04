@@ -29,10 +29,16 @@
 <!-- All visible content on the page -->
 
 <body>
-   <nav class="topnav">     
-      <a class="active" href="#about"><p>About me</p></a>
-      <a href="#projects"><p>Projects</p></a>
-      <a href="#contact"><p>Contact me</p></a>
+   <nav class="topnav">
+      <a class="active" href="#about">
+         <p>About me</p>
+      </a>
+      <a href="#projects">
+         <p>Projects</p>
+      </a>
+      <a href="#contact">
+         <p>Contact me</p>
+      </a>
       <!-- <a href="#others"><p>Others</p></a> -->
       <img id="logo" alt="websiteLogo" src="images/icon.png">
    </nav>
@@ -45,13 +51,15 @@
          <img id="portrait" alt="my portrait" src="images/portrait.png">
          <p id="age">
             Thank you for taking a look at my website! My name is Andres Munoz, a motivated
-             X year old developer eager to get into the professional field. <br><br>
-             Most of my experience comes from school projects, however I always made sure to go above 
-             and beyond to ensure that confidently say that I understand what I am doing, and can apply it in the real world.
-              I am currently enrolled in McGill university and expect to finish my studies in April 2025.
-            
-              <br><br>On a personal level, I am a very curious person, always looking for new and interesting topics to learn about.
-              I also enjoy playing videogames and spending time with my family.
+            X year old developer eager to get into the professional field. <br><br>
+            Most of my experience comes from school projects, however I always made sure to go above
+            and beyond to ensure that confidently say that I understand what I am doing, and can apply it in the real
+            world.
+            I am currently enrolled in McGill university and expect to finish my studies in April 2025.
+
+            <br><br>On a personal level, I am a very curious person, always looking for new and interesting topics to
+            learn about.
+            I also enjoy playing videogames and spending time with my family.
          </p>
       </div>
    </section>
@@ -64,21 +72,21 @@
                <div class="swiper-slide card">
                   <div class="card-container">
                      <div class="card-content">
-                        <div class="text">Chess-game GUI 
-                           <p> Made a fully functional GUI for a chess game using JavaFX. 
-                              This was my final project for college, 
+                        <div class="text">Chess-game GUI
+                           <p> Made a fully functional GUI for a chess game using JavaFX.
+                              This was my final project for college,
                               and it was made in collaboration with 2 other people,
-                               who were handling chess engine logic and local online play respectively.
-                               All menu logic and controls were implemented by me. I also helped with 
-                               merging all the individual components together, debugging them and adding additional 
-                               functionalities to them when necessary.
+                              who were handling chess engine logic and local online play respectively.
+                              All menu logic and controls were implemented by me. I also helped with
+                              merging all the individual components together, debugging them and adding additional
+                              functionalities to them when necessary.
                            </p>
                         </div>
                         <img class="project-image" src="images/project1.png">
-                      
+
                      </div>
                      <div class="button">
-                        <button onclick="window.location.href='https://github.com/SaadZellag/Chess-Game';"">Project repository</button>
+                        <a href="https://github.com/Zonum9/Chess-Game">Project repository</a>
                      </div>
                   </div>
                </div>
@@ -87,21 +95,21 @@
                <div class="swiper-slide card">
                   <div class="card-container">
                      <div class="card-content">
-                        <div class="text">Project 2
-                           <p> this is the project description what
-                              happsssssssssssssseeeeeesssssssssssssssssssssssssssssssssssssssssssssssssssdsdssssssssssssssssssssssssssssssssens
-                              make it longer i wonder?
-                              this is the test of that thing because i donot
-                              kown whtowiuhewekj f
+                        <div class="text">Personal website
+                           <p> I made the website you are currently looking at.
+                              I used a library called <a href="https://swiperjs.com/">swiper</a>
+                              to implement the sliding cards that hold my projects.
+
+
                            </p>
-                           
-                        </div>                        
-                        <img class="project-image" src="images/project1.png">
-                     
-                           
+
+                        </div>
+                        <iframe src="index.html" class="project-image"></iframe>
+
+
                      </div>
                      <div class="button">
-                        <button>Project repo</button>
+                        <a href="https://github.com/Zonum9/personalWebsite">Project repository</a>
                      </div>
                   </div>
                </div>
@@ -114,15 +122,31 @@
          <div class="swiper-pagination"></div>
       </div>
    </section>
-
    <section class="text" id="contact">Contact me<br>
       <p>Feel free to reach out if you have any inquiries:</p>
       <div class="content">
-         <a href="mailto:andresfemp@gmail.com"><i class="fa-solid fa-envelope" ></i></a>
-         <i class="fab fa-github" onclick="window.location.href='https://github.com/Zonum9';"></i>   
-         <i class="fa-brands fa-linkedin" onclick="window.location.href='https://www.linkedin.com/in/andres-munoz-aa2412275/';""></i>
+         <a href="mailto:andresfemp@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+         <a href="https://github.com/Zonum9"><i class="fab fa-github"></i></a>
+         <a href="https://www.linkedin.com/in/andres-munoz-aa2412275/"><i class="fa-brands fa-linkedin"></i></a>
       </div>
    </section>
+
+   <script>
+      function setSameHeight() {
+         var elements = document.querySelectorAll('.card-content >*');
+         var maxHeight = 0;
+         elements.forEach((element) => {
+            if (element.tagName.toLocaleLowerCase() !== 'iframe') {
+               maxHeight = Math.max(maxHeight, element.getBoundingClientRect().height);
+            }
+         });
+         document.querySelector('.card-content iframe').style.height = maxHeight + 'px';
+         // elements.forEach((element)=>element.style.height=maxHeight+'px');
+      }
+      setSameHeight();
+      window.addEventListener('resize', setSameHeight);
+
+   </script>
 
    <!-- <section class="text" id="others">Others<br>
       <div class="content">
