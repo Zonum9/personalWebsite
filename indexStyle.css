@@ -5,17 +5,22 @@
   --hoverColor: white;
 }
 
-#portrait {
+/* #portrait {
   border: 2px solid var(--AccentColor);  
   margin-top: 30px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 300px;  
-  border-radius: 40px;
-  
-}
+  border-radius: 40px;  
+} */
 
+#logo {
+  margin-right: 2px;
+  margin-left: auto;
+  border: 2px solid var(--cardColor);
+  border-radius: 15%;
+}
 
 
 body {
@@ -56,6 +61,7 @@ p , p a{
   height: auto;
   display: flex;
   align-items:center;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -70,6 +76,12 @@ p , p a{
   margin: 10px;  
   font-size: 32px;
 }
+
+.card-content iframe{
+  pointer-events: none;
+  height: 600px;
+}
+
 
 .button a {
   background: var(--AccentColor);
@@ -131,8 +143,14 @@ p , p a{
   .card-content .project-image{
     min-width: 90%;
     width: 90%;
+    overflow: scroll;
     /* height: 400px; */
   }
+  /* .card-content iframe{
+    pointer-events: none;
+    border: none;
+    height: 700px;
+  } */
 }
 
 
@@ -214,10 +232,7 @@ section .content {
   flex-direction:row;
   height:  50px;
 }
-#logo {
-  margin-right: 2px;
-  margin-left: auto;
-}
+
 /* Change the color of links on hover */
 .topnav a:hover {
   background-color: var(--regularTextColor);
@@ -230,5 +245,16 @@ section .content {
   background-color: var(--AccentColor);
 }
 
+#CV {
+  /* width: 500px; */
+  text-align: center;
+}
+#CV  a{  
+  /* padding: 60xp; */
+  font-size: 40px;
+  padding: 15px 30px;
+  border-radius: 90px;
+  
+}
 
 

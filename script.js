@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   var navCategories = document.querySelectorAll('nav a');
   var sections = document.querySelectorAll('section');
-
+  
   var observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -14,7 +14,24 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }, { threshold: 0.4 });
+  
   sections.forEach(section => observer.observe(section));
+
+
+//   function setSameHeight() {
+//     var elements = document.querySelectorAll('.card-content >*');
+//     var maxHeight = 0;
+//     elements.forEach((element) => {
+//        if (element.tagName.toLocaleLowerCase() !== 'iframe' ) {
+//           maxHeight = Math.max(maxHeight, element.getBoundingClientRect().height);
+//           console.log(maxHeight + " " + element);
+//        }
+//     });
+//     document.querySelector('.card-content iframe').style.height = maxHeight + 'px';
+//     // elements.forEach((element)=>element.style.height=maxHeight+'px');
+//  }
+//  setSameHeight();
+//  window.addEventListener('resize', setSameHeight);
 
   // Smooth scrolling when clicking on navigation links
   navCategories.forEach(anchor => {

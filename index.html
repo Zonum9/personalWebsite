@@ -17,7 +17,7 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
    <!-- add icon to the tab of my webpage, should use a .ico image for the final thing -->
-   <link rel="icon" href="https://static.wikia.nocookie.net/youtube/images/f/fe/Ado.jpg">
+   <link rel="icon" href="images/icon.png">
 
    <!-- link the stylesheet to the html -->
    <link rel="stylesheet" href="indexStyle.css">
@@ -48,7 +48,7 @@
    <!-- Sections -->
    <section class="text" id="about">About me<br>
       <div class="content">
-         <img id="portrait" alt="my portrait" src="images/portrait.png">
+         <!-- <img id="portrait" alt="my portrait" src="images/portrait.png"> -->
          <p id="age">
             Thank you for taking a look at my website! My name is Andres Munoz, a motivated
             X year old developer eager to get into the professional field. <br><br>
@@ -61,15 +61,19 @@
             learn about.
             I also enjoy playing videogames and spending time with my family.
          </p>
+         <div class="button" id="CV">
+            <a href="CV.pdf" target="_blank"><i class="fa-solid fa-download"></i> Resume</a>
+         </div>
       </div>
    </section>
+   
    <section class="text" id="projects">Projects <br><br>
       <div class="content">
          <div class="swiper mySwiper container">
             <div class="swiper-wrapper">
 
                <!-- first card -->
-               <div class="swiper-slide card">
+               <div class="swiper-slide card" id="project1">
                   <div class="card-container">
                      <div class="card-content">
                         <div class="text">Chess-game GUI
@@ -92,13 +96,15 @@
                </div>
 
                <!-- second card -->
-               <div class="swiper-slide card">
+               <div class="swiper-slide card" id="project2">
                   <div class="card-container">
                      <div class="card-content">
                         <div class="text">Personal website
                            <p> I made the website you are currently looking at.
                               I used a library called <a href="https://swiperjs.com/">swiper</a>
                               to implement the sliding cards that hold my projects.
+                              <br>
+                              Thank you once again for taking your time to look at it!
 
 
                            </p>
@@ -113,6 +119,29 @@
                      </div>
                   </div>
                </div>
+               <!-- third card -->
+               <div class="swiper-slide card" id="project3">
+                  <div class="card-container">
+                     <div class="card-content">
+                        <div class="text">Simple file system in C
+                           <p> Made a fully functional GUI for a chess game using JavaFX.
+                              This was my final project for college,
+                              and it was made in collaboration with 2 other people,
+                              who were handling chess engine logic and local online play respectively.
+                              All menu logic and controls were implemented by me. I also helped with
+                              merging all the individual components together, debugging them and adding additional
+                              functionalities to them when necessary.
+                           </p>
+                        </div>
+                        <img class="project-image" src="images/project1.png">
+
+                     </div>
+                     <div class="button">
+                        <a href="https://github.com/Zonum9/Chess-Game">Project repository</a>
+                     </div>
+                  </div>
+               </div>
+
 
             </div>
          </div>
@@ -131,22 +160,6 @@
       </div>
    </section>
 
-   <script>
-      function setSameHeight() {
-         var elements = document.querySelectorAll('.card-content >*');
-         var maxHeight = 0;
-         elements.forEach((element) => {
-            if (element.tagName.toLocaleLowerCase() !== 'iframe') {
-               maxHeight = Math.max(maxHeight, element.getBoundingClientRect().height);
-            }
-         });
-         document.querySelector('.card-content iframe').style.height = maxHeight + 'px';
-         // elements.forEach((element)=>element.style.height=maxHeight+'px');
-      }
-      setSameHeight();
-      window.addEventListener('resize', setSameHeight);
-
-   </script>
 
    <!-- <section class="text" id="others">Others<br>
       <div class="content">
