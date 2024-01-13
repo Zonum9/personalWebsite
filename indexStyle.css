@@ -3,6 +3,7 @@
   --regularTextColor: rgb(230, 216, 255);
   --cardColor: rgb(47, 47, 47);
   --hoverColor: white;
+  --swiper-pagination-bullet-inactive-opacity: 0.3
 }
 
 /* #portrait {
@@ -39,7 +40,7 @@ body {
   word-wrap: break-word;
 }
 
-p , p a{
+p , p a, li{
   color: var(--regularTextColor);
 }
 
@@ -79,7 +80,7 @@ p , p a{
 
 .card-content iframe{
   pointer-events: none;
-  height: 600px;
+  height: 400px;
 }
 
 
@@ -163,6 +164,7 @@ p , p a{
   margin-top: 1000px;
   height: 7px;
   width: 30px;
+  border-radius: 10px;
   background: var(--AccentColor);
 }
 

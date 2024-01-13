@@ -30,15 +30,20 @@
 
 <body>
    <nav class="topnav">
+      <a href="#skills">
+         <p>Skills</p>
+      </a>
       <a class="active" href="#about">
          <p>About me</p>
       </a>
+      
       <a href="#projects">
          <p>Projects</p>
       </a>
       <a href="#contact">
          <p>Contact me</p>
       </a>
+     
       <!-- <a href="#others"><p>Others</p></a> -->
       <img id="logo" alt="websiteLogo" src="images/icon.png">
    </nav>
@@ -46,16 +51,37 @@
    <h1 class="text" id="welcome">Welcome to my website!</h1>
    <br>
    <!-- Sections -->
+   <section class="text" id="skills">Skills/Attributes<br>
+      <div class="content">
+         <ul>
+            <li>Java, C, Python, HTML/CSS</li>
+            <li>Autonomous, quick learner, motivated, receptive to criticism and new ideas</li>
+            <li>Good at following instructions, and at looking for solutions</li>
+            <li>Fluent in English, French and Spanish</li>
+            
+            
+          </ul>
+          
+      </div>
+   </section>
+
    <section class="text" id="about">About me<br>
       <div class="content">
          <!-- <img id="portrait" alt="my portrait" src="images/portrait.png"> -->
          <p id="age">
             Thank you for taking a look at my website! My name is Andres Munoz, a motivated
-            X year old developer eager to get into the professional field. <br><br>
-            Most of my experience comes from school projects, however I always made sure to go above
-            and beyond to ensure that confidently say that I understand what I am doing, and can apply it in the real
-            world.
-            I am currently enrolled in McGill university and expect to finish my studies in April 2025.
+            X year old developer eager to get into the professional field. I have good programming knowledge
+            in Java and C, as well as experience with Python.<br><br>
+
+            I am currently enrolled in McGill university with a Bachelor's in Computer Science, and expect to finish my
+            studies in April 2025.<br><br>
+
+            Some of my biggest strengths are my ability to learn quickly and my autonomy, which have been the
+            foundations for my academic and personal success.
+
+            <!-- Most of my experience comes from school projects, however I always made sure to go above
+            and beyond to ensure that I understand what I am doing with confidence, and can apply it in the real
+            world. -->
 
             <br><br>On a personal level, I am a very curious person, always looking for new and interesting topics to
             learn about.
@@ -66,7 +92,9 @@
          </div>
       </div>
    </section>
-   
+
+
+
    <section class="text" id="projects">Projects <br><br>
       <div class="content">
          <div class="swiper mySwiper container">
@@ -78,19 +106,21 @@
                      <div class="card-content">
                         <div class="text">Chess-game GUI
                            <p> Made a fully functional GUI for a chess game using JavaFX.
-                              This was my final project for college,
+                              The chess game supports local online play and has a built in engine to allow for
+                              singleplayer play.
+                              <!-- This was my final project for college,
                               and it was made in collaboration with 2 other people,
-                              who were handling chess engine logic and local online play respectively.
+                              who were handling chess engine logic and local online play respectively. -->
                               All menu logic and controls were implemented by me. I also helped with
                               merging all the individual components together, debugging them and adding additional
                               functionalities to them when necessary.
                            </p>
                         </div>
-                        <img class="project-image" src="images/project1.png">
+                        <video src="images/chessvid.mp4" class="project-image" muted loop controls></video>
 
                      </div>
                      <div class="button">
-                        <a href="https://github.com/Zonum9/Chess-Game">Project repository</a>
+                        <a href="https://github.com/Zonum9/Chess-Game" target="_blank">Project repository</a>
                      </div>
                   </div>
                </div>
@@ -101,7 +131,7 @@
                      <div class="card-content">
                         <div class="text">Personal website
                            <p> I made the website you are currently looking at.
-                              I used a library called <a href="https://swiperjs.com/">swiper</a>
+                              I used a library called <a href="https://swiperjs.com/" target="_blank">swiper</a>
                               to implement the sliding cards that hold my projects.
                               <br>
                               Thank you once again for taking your time to look at it!
@@ -115,7 +145,7 @@
 
                      </div>
                      <div class="button">
-                        <a href="https://github.com/Zonum9/personalWebsite">Project repository</a>
+                        <a href="https://github.com/Zonum9/personalWebsite" target="_blank">Project repository</a>
                      </div>
                   </div>
                </div>
@@ -124,24 +154,56 @@
                   <div class="card-container">
                      <div class="card-content">
                         <div class="text">Simple file system in C
-                           <p> Made a fully functional GUI for a chess game using JavaFX.
-                              This was my final project for college,
-                              and it was made in collaboration with 2 other people,
-                              who were handling chess engine logic and local online play respectively.
-                              All menu logic and controls were implemented by me. I also helped with
-                              merging all the individual components together, debugging them and adding additional
-                              functionalities to them when necessary.
+                           <p>
+                                 Made a simple Unix like, single layer file system, that supports 
+                                 virtual disks of variable sizes. The file system allows for
+                                  file creation, deletion, and modification inside of the virtual disk.
+                                  <br><br>
+                                  This project taught me a lot about how to handle pointers in C, as well as
+                                  methods for storing and loading data from files, allowing for a program to maintain it's state
+                                  even after being shutdown
+                                                           
                            </p>
                         </div>
-                        <img class="project-image" src="images/project1.png">
-
-                     </div>
-                     <div class="button">
-                        <a href="https://github.com/Zonum9/Chess-Game">Project repository</a>
+                        <img src="images/project 3.png" class="project-image">
                      </div>
                   </div>
                </div>
+               <!-- fourth card -->
+               <div class="swiper-slide card" id="project4">
+                  <div class="card-container">
+                     <div class="card-content">
+                        <div class="text">Simple bash like shell in C
+                           <p> 
+                              
+                                 Made a simple bash like terminal application, that supports command piping, built in commands, and external commands.
+                                 It also supports background processes, tracking their lifetime. I learned a good deal on the basics
+                                  of multiprocessing from this project.
 
+                              
+                           </p>
+                        </div>
+                        <img src="images/project 4.png" class="project-image">
+                        
+
+                     </div>
+                  </div>
+               </div>
+                <!-- fifth card -->
+                <div class="swiper-slide card" id="project5">
+                  <div class="card-container">
+                     <div class="card-content">
+                        <div class="text">Self balancing cart-pole in Python
+                           <p> Used a basic Q learning reinforcement learning technique in order to create a
+                              self balancing inverted pendulum. Through trial and error, the pendulum learned to balance itself without the need of
+                              any user input.
+                           </p>
+                        </div>
+                        <video src="images/cart pole.mp4" class="project-image" muted loop controls></video>
+
+                     </div>
+                  </div>
+               </div>
 
             </div>
          </div>
@@ -154,9 +216,9 @@
    <section class="text" id="contact">Contact me<br>
       <p>Feel free to reach out if you have any inquiries:</p>
       <div class="content">
-         <a href="mailto:andresfemp@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-         <a href="https://github.com/Zonum9"><i class="fab fa-github"></i></a>
-         <a href="https://www.linkedin.com/in/andres-munoz-aa2412275/"><i class="fa-brands fa-linkedin"></i></a>
+         <a href="mailto:andresfemp@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+         <a href="https://github.com/Zonum9" target="_blank"><i class="fab fa-github"></i></a>
+         <a href="https://www.linkedin.com/in/andres-munoz-aa2412275/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
       </div>
    </section>
 
