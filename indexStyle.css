@@ -1,5 +1,5 @@
 :root {
-  --AccentColor: rgb(150, 25, 222);
+  --AccentColor: rgb(205, 117, 255);
   --regularTextColor: rgb(230, 216, 255);
   --cardColor: rgb(47, 47, 47);
   --hoverColor: white;
@@ -26,8 +26,7 @@
 
 body {
   background-color: #1E1E1E;
-  /* display: flex; */
-  /* background: linear-gradient(to bottom, #290928,#000000) */
+  margin: 0 10rem ;
 }
 
 .text {
@@ -86,7 +85,7 @@ p , p a, li{
 
 .button a {
   background: var(--AccentColor);
-  color: var(--regularTextColor);
+  color: black;
   padding: 8px 22px;
   border-radius: 20px;
   font-size: 14px;
